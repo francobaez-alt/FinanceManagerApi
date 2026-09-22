@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FinanceAPI.Domain.Entities
+﻿namespace FinanceAPI.Domain.Entities
 {
-    // <summary>
-    // Entidad que representa un rol en el sistema.
-    // </summary>
+    /// <summary>
+    /// Entidad que representa un rol en el sistema.
+    /// </summary>
     public class Role
     {
         // Propiedades

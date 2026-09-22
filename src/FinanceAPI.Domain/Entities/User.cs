@@ -8,7 +8,7 @@ namespace FinanceAPI.Domain.Entities
     public class User
     {
         // Propiedades
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public int RoleId { get; set; }
         public string Username { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;

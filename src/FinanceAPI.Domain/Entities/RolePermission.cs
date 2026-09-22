@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FinanceAPI.Domain.Entities
+﻿namespace FinanceAPI.Domain.Entities
 {
-    // <summary>
-    // Entidad que representa la relación entre roles y permisos.
-    // </summary>
+    /// <summary>
+    /// Entidad que representa la relación entre roles y permisos.
+    /// </summary>
     public class RolePermission
     {
         // Propiedades
