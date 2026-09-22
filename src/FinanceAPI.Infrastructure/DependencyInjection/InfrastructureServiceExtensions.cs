@@ -3,20 +3,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace FinanceAPI.Infrastructure.DependencyInjection
+namespace FinanceAPI.Infrastructure.DependencyInjection;
+
+public static class InfrastructureServiceExtensions
 {
-    public static class InfrastructureServiceExtensions
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        IConfiguration configuration)
     {
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
-        {
-            var connectionString = configuration.GetConnectionString("DefaultConnection")
+        var connectionString = configuration.GetConnectionString("DefaultConnection")
             ?? throw new InvalidOperationException(
                 "No se encontró 'DefaultConnection' en la configuración.");
 
-            services.AddDbContext<FinanceManagerDbContext>(options =>
-                options.UseSqlServer(connectionString));
+        services.AddDbContext<FinanceManagerDbContext>(options =>
+            options.UseSqlServer(connectionString));
 
-            return services;
-        }
+        return services;
     }
 }
