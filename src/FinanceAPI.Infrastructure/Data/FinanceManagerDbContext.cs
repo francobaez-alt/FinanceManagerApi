@@ -7,7 +7,7 @@ namespace FinanceAPI.Infrastructure.Data
     /// <summary>
     /// Contexto de base de datos para la aplicación FinanceAPI.
     /// </summary>
-    internal class FinanceManagerDbContext : DbContext
+    public class FinanceManagerDbContext : DbContext
     {
         public FinanceManagerDbContext(DbContextOptions<FinanceManagerDbContext> options) : base(options)
         {
