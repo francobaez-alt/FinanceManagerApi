@@ -1,5 +1,4 @@
 ﻿using FinanceAPI.Application.Interfaces;
-using FinanceAPI.Domain.Interfaces;
 using FinanceAPI.Infrastructure.Data;
 using FinanceAPI.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
