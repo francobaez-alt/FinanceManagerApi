@@ -1,17 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinanceAPI.Domain.Entities
 {
-    // <summary>
-    // Entidad que representa un token de refresco en el sistema.
-    // </summary>
+    /// <summary>
+    /// Entidad que representa un token de refresco en el sistema.
+    /// </summary>
     public class RefreshToken
     {
         // Propiedades
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public Guid UserId { get; set; }
         public string Token { get; set; } = string.Empty;
         public DateTime ExpiresAt { get; set; }

@@ -1,4 +1,7 @@
-﻿using FinanceAPI.Infrastructure.Data;
+﻿using FinanceAPI.Application.Interfaces;
+using FinanceAPI.Domain.Interfaces;
+using FinanceAPI.Infrastructure.Data;
+using FinanceAPI.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,6 +20,9 @@ public static class InfrastructureServiceExtensions
 
         services.AddDbContext<FinanceManagerDbContext>(options =>
             options.UseSqlServer(connectionString));
+
+        services.AddScoped(typeof(IRepository<,>), typeof(Repository<,>));
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }
